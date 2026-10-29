@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { site } from "@/lib/site";
 import { isDemo } from "@/lib/github";
 import "./globals.css";
@@ -50,6 +51,7 @@ export default function RootLayout({
           Skip to content
         </a>
         {children}
+        <Analytics />
       </body>
     </html>
   );
